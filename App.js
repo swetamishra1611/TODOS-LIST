@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
 } from "react-router-dom";
 
 function App() {
@@ -67,12 +67,16 @@ function App() {
                 <AddTodo addTodo={addTodo} />
                 <Todos todos={todos} onDelete={onDelete} />
               </>)
+
           }}>
+
           </Route>
           <Route exact path="/about">
             <About />
           </Route>
+
         </Switch>
+
         <Footer />
       </Router>
     </>
